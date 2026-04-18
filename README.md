@@ -1,16 +1,30 @@
-# seminar_hall_booking_app
+# Seminar Hall Booking App
 
-A new Flutter project.
+A Flutter based mobile application developed to manage seminar hall bookings in a college environmnet. The system ensures that only authorized staff can book the hall, while students can view schedules.
 
-## Getting Started
+## Features:
+ - Role-based authentication (Admin / Student)
+ - Admin-only booking system
+ - 30-minute buffer between bookings
+ - Calendar view of bookings
+ - Booking approval and rejection system
+ - Delete booking with confirmation
+ - Real-time updates using Firebase Firestore
+## Tech Stack:
+ - Flutter (Frontend)
+ - Firebase Authentication
+ - Cloud Firestore (Database)
+## APK Download
 
-This project is a starting point for a Flutter application.
+ Download the app from the **Releases** section of this repository.
 
-A few resources to get you started if this is your first Flutter project:
+- arm64 → Recommended for most Android phones
+- armeabi-v7a → For older devices
+- x86_64 → Emulator/testing
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How It Works: 
+  - User logs in using Firebase Authentication
+  - Role is fetched from Firestore database
+  - Admin can create, approve, edit, and delete bookings
+  - Students can view bookings and schedules
+  - All updates reflect in real-time
