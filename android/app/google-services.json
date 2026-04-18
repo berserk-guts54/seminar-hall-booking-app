@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "807262058924",
+    "project_id": "seminar-hall-booking-app-f201a",
+    "storage_bucket": "seminar-hall-booking-app-f201a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807262058924:android:3a2e48bef1d49331aa6209",
+        "android_client_info": {
+          "package_name": "com.example.seminar_hall_booking_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZv6YuRrZRJgrahLdf43bMMI8OcgZstFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
