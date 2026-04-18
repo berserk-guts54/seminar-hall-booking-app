@@ -18,7 +18,7 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen> {
 
-  // 🔐 LOGOUT CONFIRMATION
+  //  LOGOUT CONFIRMATION
   Future<void> confirmLogout(BuildContext context, AuthService auth) async {
     final shouldLogout = await showDialog(
       context: context,
@@ -48,7 +48,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     }
   }
 
-  // 🎨 STATUS COLOR
+  //  STATUS COLOR
   Color getStatusColor(String status) {
     switch (status) {
       case "approved":
@@ -72,7 +72,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         title: const Text("Admin Dashboard"),
         backgroundColor: Colors.deepPurple,
         actions: [
-          // 🕘 HISTORY
+          //  HISTORY
           IconButton(
             icon: const Icon(Icons.history),
             onPressed: () {
@@ -85,7 +85,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             },
           ),
 
-          // 🔐 LOGOUT
+          //  LOGOUT
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () => confirmLogout(context, auth),
@@ -96,7 +96,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       body: Column(
         children: [
 
-          // ➕ CREATE BOOKING
+          //  CREATE BOOKING
           Padding(
             padding: const EdgeInsets.all(12),
             child: ElevatedButton.icon(
@@ -124,7 +124,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
           ),
 
-          // 📋 BOOKINGS LIST
+          //  BOOKINGS LIST
           Expanded(
             child: StreamBuilder<List<BookingModel>>(
               stream: bookingService.getAllBookings(),
@@ -155,7 +155,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
 
-                            // 🔹 HEADER
+                            //  HEADER
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -178,20 +178,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
                             const SizedBox(height: 6),
 
-                            // 📅 DATE
+                            //  DATE
                             Text("📅 ${b.date.day}-${b.date.month}-${b.date.year}"),
 
-                            // ⏰ TIME
+                            //  TIME
                             Text("⏰ ${b.startTime} - ${b.endTime}"),
 
                             const SizedBox(height: 10),
 
-                            // ⚙ ACTIONS
+                            //  ACTIONS
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
 
-                                // ✏ EDIT
+                                //  EDIT
                                 IconButton(
                                   icon: const Icon(Icons.edit, color: Colors.blue),
                                   onPressed: () {
@@ -205,7 +205,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   },
                                 ),
 
-                                // 🗑 DELETE WITH CONFIRMATION
+                                //  DELETE WITH CONFIRMATION
                                 IconButton(
                                   icon: const Icon(Icons.delete, color: Colors.red),
                                   onPressed: () async {
@@ -249,7 +249,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   },
                                 ),
 
-                                // ✅ APPROVE
+                                //  APPROVE
                                 if (b.status == "pending")
                                   IconButton(
                                     icon: const Icon(Icons.check_circle,
@@ -298,7 +298,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
           ),
 
-          // 📅 CALENDAR BUTTON
+          //  CALENDAR BUTTON
           Padding(
             padding: const EdgeInsets.all(12),
             child: ElevatedButton(
